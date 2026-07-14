@@ -72,14 +72,7 @@ private val DarkColorScheme = darkColorScheme(
     surfaceTint = md_theme_dark_surfaceTint
 )
 
-/**
- * Main theme for the FlashCard app.
- * Supports dynamic colors on Android 12+ and falls back to custom color scheme.
- *
- * @param darkTheme Whether to use the dark theme variant.
- * @param dynamicColor Whether to use dynamic Material You colors (Android 12+).
- * @param content The composable content to theme.
- */
+
 @Composable
 fun FlashCardTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),

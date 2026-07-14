@@ -34,23 +34,17 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
-/**
- * A visually rich empty state composable displayed when no flashcards exist.
- * Features an animated icon, descriptive text, and a pulsing "Add Flashcard" button.
- *
- * @param onAddClick Callback invoked when the user taps the "Add Flashcard" button.
- * @param modifier Modifier applied to the root layout.
- */
+
 @Composable
 fun EmptyState(
     onAddClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    // Control entrance animation visibility
+    
     var isVisible by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) { isVisible = true }
 
-    // Subtle pulse animation for the add button
+    
     val infiniteTransition = rememberInfiniteTransition(label = "pulse")
     val scale by infiniteTransition.animateFloat(
         initialValue = 1f,
@@ -77,7 +71,7 @@ fun EmptyState(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            // Large school icon
+            
             Icon(
                 imageVector = Icons.Outlined.School,
                 contentDescription = "No flashcards",
@@ -87,7 +81,7 @@ fun EmptyState(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Title
+            
             Text(
                 text = "No Flashcards Yet",
                 style = MaterialTheme.typography.headlineMedium,
@@ -97,7 +91,7 @@ fun EmptyState(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // Subtitle
+            
             Text(
                 text = "Create your first flashcard to start learning!",
                 style = MaterialTheme.typography.bodyLarge,
@@ -107,7 +101,7 @@ fun EmptyState(
 
             Spacer(modifier = Modifier.height(36.dp))
 
-            // Animated add button with pulse effect
+            
             FilledTonalButton(
                 onClick = onAddClick,
                 modifier = Modifier.scale(scale)

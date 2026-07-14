@@ -49,13 +49,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
-/**
- * Add/Edit screen composable for creating new or updating existing flashcards.
- * Features validated form fields with animated entrance effects.
- *
- * @param onNavigateBack Callback to navigate back to the previous screen.
- * @param viewModel The AddEditViewModel instance, injected via Hilt.
- */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddEditScreen(
@@ -65,11 +59,11 @@ fun AddEditScreen(
     val uiState by viewModel.uiState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
-    // Control entrance animation
+    
     var isFieldsVisible by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) { isFieldsVisible = true }
 
-    // Observe one-time events
+    
     LaunchedEffect(Unit) {
         viewModel.events.collect { event ->
             when (event) {
@@ -100,7 +94,7 @@ fun AddEditScreen(
                     }
                 },
                 actions = {
-                    // Save action in the app bar
+                    
                     IconButton(
                         onClick = { viewModel.saveFlashcard() },
                         enabled = !uiState.isSaving
@@ -141,7 +135,7 @@ fun AddEditScreen(
             ) {
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Question field
+                
                 OutlinedTextField(
                     value = uiState.question,
                     onValueChange = { viewModel.onQuestionChanged(it) },
@@ -172,7 +166,7 @@ fun AddEditScreen(
 
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // Answer field
+                
                 OutlinedTextField(
                     value = uiState.answer,
                     onValueChange = { viewModel.onAnswerChanged(it) },
@@ -203,7 +197,7 @@ fun AddEditScreen(
 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // Save button - full width
+                
                 Button(
                     onClick = { viewModel.saveFlashcard() },
                     enabled = !uiState.isSaving,
@@ -238,7 +232,7 @@ fun AddEditScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Tip text
+                
                 Text(
                     text = "💡 Tip: Keep your flashcards concise for better learning!",
                     style = MaterialTheme.typography.bodyMedium,

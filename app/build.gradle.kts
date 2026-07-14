@@ -43,12 +43,12 @@ ksp {
 }
 
 dependencies {
-    // Core Android
+    
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
 
-    // Compose BOM
+    
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.graphics)
@@ -58,23 +58,23 @@ dependencies {
     implementation(libs.compose.material.icons.extended)
     debugImplementation(libs.compose.ui.tooling)
 
-    // Google Fonts
+    
     implementation(libs.compose.ui.google.fonts)
 
-    // Navigation
+    
     implementation(libs.navigation.compose)
 
-    // Room
+    
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
-    // Hilt
+    
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
-    // Coroutines
+    
     implementation(libs.coroutines.core)
     implementation(libs.coroutines.android)
 }

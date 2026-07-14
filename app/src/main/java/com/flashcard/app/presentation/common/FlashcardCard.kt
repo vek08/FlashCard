@@ -49,18 +49,7 @@ import com.flashcard.app.presentation.theme.CardGradientEndDark
 import com.flashcard.app.presentation.theme.CardGradientStart
 import com.flashcard.app.presentation.theme.CardGradientStartDark
 
-/**
- * A premium-looking flashcard card composable with gradient background,
- * animated answer reveal, and edit/delete actions.
- *
- * @param flashcard The flashcard data to display.
- * @param isAnswerVisible Whether the answer section is currently shown.
- * @param onToggleAnswer Callback to show/hide the answer.
- * @param onEdit Callback to edit this flashcard.
- * @param onDelete Callback to delete this flashcard.
- * @param cardPosition Optional card position text (e.g., "3 / 10").
- * @param modifier Modifier applied to the card.
- */
+
 @Composable
 fun FlashcardCard(
     flashcard: Flashcard,
@@ -73,7 +62,7 @@ fun FlashcardCard(
 ) {
     val isDark = isSystemInDarkTheme()
 
-    // Select gradient colors based on theme
+    
     val gradientBrush = Brush.linearGradient(
         colors = if (isDark) {
             listOf(CardGradientStartDark, CardGradientEndDark)
@@ -82,7 +71,7 @@ fun FlashcardCard(
         }
     )
 
-    // Semi-transparent white for glassmorphism-lite effect
+    
     val glassOverlay = if (isDark) Color.White.copy(alpha = 0.06f) else Color.White.copy(alpha = 0.15f)
     val textOnGradient = Color.White
     val subtleTextOnGradient = Color.White.copy(alpha = 0.80f)
@@ -100,7 +89,7 @@ fun FlashcardCard(
                 .fillMaxWidth()
                 .background(brush = gradientBrush)
         ) {
-            // Glassmorphism overlay layer
+            
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -115,7 +104,7 @@ fun FlashcardCard(
                     .padding(24.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Card position badge (optional)
+                
                 if (cardPosition != null) {
                     Text(
                         text = cardPosition,
@@ -126,7 +115,7 @@ fun FlashcardCard(
                     Spacer(modifier = Modifier.height(8.dp))
                 }
 
-                // Question label
+                
                 Text(
                     text = "QUESTION",
                     style = MaterialTheme.typography.labelMedium,
@@ -137,7 +126,7 @@ fun FlashcardCard(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Question text
+                
                 Text(
                     text = flashcard.question,
                     style = MaterialTheme.typography.headlineMedium,
@@ -149,7 +138,7 @@ fun FlashcardCard(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Show/Hide Answer button
+                
                 FilledTonalButton(
                     onClick = onToggleAnswer,
                     colors = ButtonDefaults.filledTonalButtonColors(
@@ -173,14 +162,14 @@ fun FlashcardCard(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Divider between question and answer
+                
                 HorizontalDivider(
                     modifier = Modifier.fillMaxWidth(0.6f),
                     thickness = 1.dp,
                     color = dividerColor
                 )
 
-                // Animated answer section
+                
                 AnimatedVisibility(
                     visible = isAnswerVisible,
                     enter = expandVertically(expandFrom = Alignment.Top) + fadeIn(),
@@ -192,7 +181,7 @@ fun FlashcardCard(
                             .padding(top = 16.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        // Answer label
+                        
                         Text(
                             text = "ANSWER",
                             style = MaterialTheme.typography.labelMedium,
@@ -203,7 +192,7 @@ fun FlashcardCard(
 
                         Spacer(modifier = Modifier.height(12.dp))
 
-                        // Answer text
+                        
                         Text(
                             text = flashcard.answer,
                             style = MaterialTheme.typography.titleLarge,
@@ -217,7 +206,7 @@ fun FlashcardCard(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Bottom divider
+                
                 HorizontalDivider(
                     modifier = Modifier.fillMaxWidth(),
                     thickness = 1.dp,
@@ -226,13 +215,13 @@ fun FlashcardCard(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Action buttons row
+                
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.End,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Edit button
+                    
                     IconButton(
                         onClick = onEdit,
                         colors = IconButtonDefaults.iconButtonColors(
@@ -245,7 +234,7 @@ fun FlashcardCard(
                         )
                     }
 
-                    // Delete button
+                    
                     IconButton(
                         onClick = onDelete,
                         colors = IconButtonDefaults.iconButtonColors(

@@ -13,17 +13,14 @@ import androidx.navigation.navArgument
 import com.flashcard.app.presentation.addEdit.AddEditScreen
 import com.flashcard.app.presentation.home.HomeScreen
 
-/**
- * Navigation graph for the FlashCard app.
- * Defines all routes and their animated transitions.
- */
+
 @Composable
 fun NavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
         startDestination = Screen.Home.route,
     ) {
-        // Home screen - main flashcard quiz view
+        
         composable(
             route = Screen.Home.route,
             enterTransition = { fadeIn(animationSpec = tween(300)) },
@@ -39,7 +36,7 @@ fun NavGraph(navController: NavHostController) {
             )
         }
 
-        // Add flashcard screen
+        
         composable(
             route = Screen.AddFlashcard.route,
             enterTransition = {
@@ -60,7 +57,7 @@ fun NavGraph(navController: NavHostController) {
             )
         }
 
-        // Edit flashcard screen
+        
         composable(
             route = Screen.EditFlashcard.route,
             arguments = listOf(

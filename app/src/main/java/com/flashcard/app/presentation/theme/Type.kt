@@ -9,10 +9,7 @@ import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.unit.sp
 import com.flashcard.app.R
 
-/**
- * Google Fonts provider for downloading fonts at runtime.
- * Uses Google Mobile Services as the font provider.
- */
+
 val provider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
     providerPackage = "com.google.android.gms",
@@ -21,9 +18,7 @@ val provider = GoogleFont.Provider(
 
 val InterFont = GoogleFont("Inter")
 
-/**
- * Inter font family with multiple weights for rich typography hierarchy.
- */
+
 val InterFontFamily = FontFamily(
     Font(googleFont = InterFont, fontProvider = provider, weight = FontWeight.Light),
     Font(googleFont = InterFont, fontProvider = provider, weight = FontWeight.Normal),
@@ -32,10 +27,7 @@ val InterFontFamily = FontFamily(
     Font(googleFont = InterFont, fontProvider = provider, weight = FontWeight.Bold),
 )
 
-/**
- * App-wide typography scale using the Inter font family.
- * Follows Material 3 type scale with custom sizing and weights.
- */
+
 val AppTypography = Typography(
     displayLarge = TextStyle(
         fontFamily = InterFontFamily,

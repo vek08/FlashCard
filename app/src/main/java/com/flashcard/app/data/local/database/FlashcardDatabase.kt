@@ -6,28 +6,14 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.flashcard.app.data.local.dao.FlashcardDao
 import com.flashcard.app.data.local.entity.Flashcard
 
-/**
- * Room database for the FlashCard application.
- *
- * Contains the [Flashcard] entity and provides access to the [FlashcardDao].
- * On first creation, the database is pre-populated with sample flashcards
- * via the [PrepopulateCallback].
- */
+
 @Database(entities = [Flashcard::class], version = 1, exportSchema = true)
 abstract class FlashcardDatabase : RoomDatabase() {
 
-    /**
-     * Provides access to the [FlashcardDao] for performing flashcard operations.
-     */
+    
     abstract fun flashcardDao(): FlashcardDao
 
-    /**
-     * Room callback that pre-populates the database with sample flashcards
-     * when the database is first created.
-     *
-     * Uses raw SQL inserts via [SupportSQLiteDatabase] to avoid circular
-     * dependency issues with the DAO during database creation.
-     */
+    
     class PrepopulateCallback : RoomDatabase.Callback() {
 
         override fun onCreate(db: SupportSQLiteDatabase) {

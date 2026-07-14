@@ -13,11 +13,6 @@ import com.flashcard.app.presentation.navigation.NavGraph
 import com.flashcard.app.presentation.theme.FlashCardTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-/**
- * Main entry point activity for the FlashCard app.
- * Uses single-activity architecture with Jetpack Navigation Compose.
- * Annotated with @AndroidEntryPoint for Hilt dependency injection support.
- */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

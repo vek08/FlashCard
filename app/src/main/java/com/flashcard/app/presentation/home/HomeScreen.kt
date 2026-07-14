@@ -50,14 +50,7 @@ import com.flashcard.app.presentation.common.EmptyState
 import com.flashcard.app.presentation.common.FlashcardCard
 import kotlinx.coroutines.launch
 
-/**
- * Home screen composable that displays flashcards one at a time with navigation controls.
- * Shows an empty state when no cards exist, and a loading indicator during initial load.
- *
- * @param onNavigateToAdd Callback to navigate to the Add Flashcard screen.
- * @param onNavigateToEdit Callback to navigate to the Edit Flashcard screen, with the card's ID.
- * @param viewModel The HomeViewModel instance, injected via Hilt.
- */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -106,7 +99,7 @@ fun HomeScreen(
                 .padding(paddingValues)
         ) {
             when {
-                // Loading state
+                
                 uiState.isLoading -> {
                     CircularProgressIndicator(
                         modifier = Modifier.align(Alignment.Center),
@@ -114,12 +107,12 @@ fun HomeScreen(
                     )
                 }
 
-                // Empty state
+                
                 uiState.flashcards.isEmpty() -> {
                     EmptyState(onAddClick = onNavigateToAdd)
                 }
 
-                // Cards available
+                
                 else -> {
                     Column(
                         modifier = Modifier
@@ -129,7 +122,7 @@ fun HomeScreen(
                     ) {
                         Spacer(modifier = Modifier.height(8.dp))
 
-                        // Card position badge
+                        
                         Surface(
                             shape = RoundedCornerShape(20.dp),
                             color = MaterialTheme.colorScheme.primaryContainer,
@@ -146,12 +139,12 @@ fun HomeScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        // Flashcard with animated content transition
+                        
                         AnimatedContent(
                             targetState = uiState.currentIndex,
                             transitionSpec = {
                                 if (targetState > initialState) {
-                                    // Sliding forward (next card)
+                                    
                                     slideInHorizontally(
                                         animationSpec = tween(350),
                                         initialOffsetX = { fullWidth -> fullWidth }
@@ -160,7 +153,7 @@ fun HomeScreen(
                                         targetOffsetX = { fullWidth -> -fullWidth }
                                     )
                                 } else {
-                                    // Sliding backward (previous card)
+                                    
                                     slideInHorizontally(
                                         animationSpec = tween(350),
                                         initialOffsetX = { fullWidth -> -fullWidth }
@@ -183,7 +176,7 @@ fun HomeScreen(
                                     onToggleAnswer = { viewModel.toggleAnswer() },
                                     onEdit = { onNavigateToEdit(flashcard.id) },
                                     onDelete = {
-                                        // Delete with snackbar confirmation
+                                        
                                         scope.launch {
                                             val result = snackbarHostState.showSnackbar(
                                                 message = "Delete this flashcard?",
@@ -203,7 +196,7 @@ fun HomeScreen(
 
                         Spacer(modifier = Modifier.height(20.dp))
 
-                        // Navigation controls row
+                        
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -211,7 +204,7 @@ fun HomeScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            // Previous button
+                            
                             OutlinedButton(
                                 onClick = { viewModel.previousCard() },
                                 enabled = uiState.hasPrevious,
@@ -229,7 +222,7 @@ fun HomeScreen(
                                 )
                             }
 
-                            // Card counter
+                            
                             Text(
                                 text = uiState.cardPosition,
                                 style = MaterialTheme.typography.titleMedium,
@@ -237,7 +230,7 @@ fun HomeScreen(
                                 fontWeight = FontWeight.Medium
                             )
 
-                            // Next button
+                            
                             OutlinedButton(
                                 onClick = { viewModel.nextCard() },
                                 enabled = uiState.hasNext,
