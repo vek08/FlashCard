@@ -37,7 +37,7 @@ A modern **FlashCard Quiz Android application** built with **Kotlin** and **Jetp
 
 | Home Screen | Add Flashcard |
 |-------------|---------------|
-| ![Home](screenshots/home.png) | ![Add](screenshots/add_flashcard.png) |
+| ![Home](screenshots/home.jpeg) | ![Add](screenshots/add_flashcard.jpeg) |
 
 > **Note:** Replace these images with your own screenshots by creating a `screenshots` folder in your repository.
 
