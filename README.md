@@ -39,7 +39,6 @@ A modern **FlashCard Quiz Android application** built with **Kotlin** and **Jetp
 |-------------|---------------|
 | ![Home](screenshots/home.jpeg) | ![Add](screenshots/add_flashcard.jpeg) |
 
-> **Note:** Replace these images with your own screenshots by creating a `screenshots` folder in your repository.
 
 ---
 
@@ -48,7 +47,7 @@ A modern **FlashCard Quiz Android application** built with **Kotlin** and **Jetp
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/FlashCard.git
+git clone https://github.com/vek08/FlashCard.git
 ```
 
 2. Open the project in **Android Studio**.
