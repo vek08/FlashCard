@@ -1,0 +1,3 @@
+-keep,allowobfuscation,allowshrinking class com.flashcard.app.presentation.addEdit.AddEditViewModel
+-keep,allowobfuscation,allowshrinking class com.flashcard.app.presentation.addEdit.AddEditViewModel
+-keep,allowobfuscation,allowshrinking class com.flashcard.app.presentation.home.HomeViewModel

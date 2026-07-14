@@ -1,0 +1,69 @@
+package com.flashcard.app.presentation.theme
+
+import androidx.compose.ui.graphics.Color
+
+// Light Theme Colors
+val md_theme_light_primary = Color(0xFF4F46E5)          // Indigo 600
+val md_theme_light_onPrimary = Color(0xFFFFFFFF)
+val md_theme_light_primaryContainer = Color(0xFFE0E7FF)  // Indigo 100
+val md_theme_light_onPrimaryContainer = Color(0xFF1E1B4B) // Indigo 950
+val md_theme_light_secondary = Color(0xFF7C3AED)         // Violet 600
+val md_theme_light_onSecondary = Color(0xFFFFFFFF)
+val md_theme_light_secondaryContainer = Color(0xFFEDE9FE) // Violet 100
+val md_theme_light_onSecondaryContainer = Color(0xFF2E1065)
+val md_theme_light_tertiary = Color(0xFF0EA5E9)          // Sky 500
+val md_theme_light_onTertiary = Color(0xFFFFFFFF)
+val md_theme_light_tertiaryContainer = Color(0xFFE0F2FE)
+val md_theme_light_onTertiaryContainer = Color(0xFF0C4A6E)
+val md_theme_light_error = Color(0xFFDC2626)
+val md_theme_light_onError = Color(0xFFFFFFFF)
+val md_theme_light_errorContainer = Color(0xFFFEE2E2)
+val md_theme_light_onErrorContainer = Color(0xFF7F1D1D)
+val md_theme_light_background = Color(0xFFFAFAFC)
+val md_theme_light_onBackground = Color(0xFF1C1B1F)
+val md_theme_light_surface = Color(0xFFFAFAFC)
+val md_theme_light_onSurface = Color(0xFF1C1B1F)
+val md_theme_light_surfaceVariant = Color(0xFFF1F0F7)
+val md_theme_light_onSurfaceVariant = Color(0xFF49454F)
+val md_theme_light_outline = Color(0xFF7A757F)
+val md_theme_light_outlineVariant = Color(0xFFCAC4D0)
+val md_theme_light_inverseSurface = Color(0xFF313033)
+val md_theme_light_inverseOnSurface = Color(0xFFF4EFF4)
+val md_theme_light_inversePrimary = Color(0xFFA5B4FC)
+val md_theme_light_surfaceTint = Color(0xFF4F46E5)
+
+// Dark Theme Colors
+val md_theme_dark_primary = Color(0xFFA5B4FC)            // Indigo 300
+val md_theme_dark_onPrimary = Color(0xFF1E1B4B)
+val md_theme_dark_primaryContainer = Color(0xFF3730A3)    // Indigo 800
+val md_theme_dark_onPrimaryContainer = Color(0xFFE0E7FF)
+val md_theme_dark_secondary = Color(0xFFC4B5FD)          // Violet 300
+val md_theme_dark_onSecondary = Color(0xFF2E1065)
+val md_theme_dark_secondaryContainer = Color(0xFF5B21B6)
+val md_theme_dark_onSecondaryContainer = Color(0xFFEDE9FE)
+val md_theme_dark_tertiary = Color(0xFF7DD3FC)           // Sky 300
+val md_theme_dark_onTertiary = Color(0xFF0C4A6E)
+val md_theme_dark_tertiaryContainer = Color(0xFF0369A1)
+val md_theme_dark_onTertiaryContainer = Color(0xFFE0F2FE)
+val md_theme_dark_error = Color(0xFFFCA5A5)
+val md_theme_dark_onError = Color(0xFF7F1D1D)
+val md_theme_dark_errorContainer = Color(0xFF991B1B)
+val md_theme_dark_onErrorContainer = Color(0xFFFEE2E2)
+val md_theme_dark_background = Color(0xFF0F0D13)
+val md_theme_dark_onBackground = Color(0xFFE6E1E5)
+val md_theme_dark_surface = Color(0xFF0F0D13)
+val md_theme_dark_onSurface = Color(0xFFE6E1E5)
+val md_theme_dark_surfaceVariant = Color(0xFF1D1A22)
+val md_theme_dark_onSurfaceVariant = Color(0xFFCAC4D0)
+val md_theme_dark_outline = Color(0xFF938F99)
+val md_theme_dark_outlineVariant = Color(0xFF49454F)
+val md_theme_dark_inverseSurface = Color(0xFFE6E1E5)
+val md_theme_dark_inverseOnSurface = Color(0xFF313033)
+val md_theme_dark_inversePrimary = Color(0xFF4F46E5)
+val md_theme_dark_surfaceTint = Color(0xFFA5B4FC)
+
+// Gradient colors for card backgrounds
+val CardGradientStart = Color(0xFF4F46E5)
+val CardGradientEnd = Color(0xFF7C3AED)
+val CardGradientStartDark = Color(0xFF3730A3)
+val CardGradientEndDark = Color(0xFF5B21B6)

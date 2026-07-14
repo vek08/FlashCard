@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>
+            MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYD
+            VQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4g
+            VmlldzEQma4GA1UEChMGR29vZ2xlMRAwDgYDVQQLEwdBbmRyb2lkMRAwDgYDVQQD
+            EwdBbmRyb2lkMSIwIAYJKoZIhvcNAQkBFhNhbmRyb2lkQGFuZHJvaWQuY29tMB4X
+            DTA4MDgyMTIzMTM1NFoXDTM2MDEwNzIzMTM1NFowgZQxCzAJBgNVBAYTAlVTMRMw
+            EQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRAwDgYD
+            VQQKEwdBbmRyb2lkMRAwDgYDVQQLEwdBbmRyb2lkMRAwDgYDVQQDEwdBbmRyb2lk
+            MSIwIAYJKoZIhvcNAQkBFhNhbmRyb2lkQGFuZHJvaWQuY29tMIIBuDCCASwGByqG
+            SM44BAEwggEfAoGBANnI0MmEHKKJoLIyHcGMOBsYHSGpraWv7hhv0ThTLqZsoIjK
+            tY2LfkhpOhE1jEOIealpoJDDkMWJFVM8AIbmIIi0MealILBEe2a0sLSSqfPHoxrna
+            tGi2GM7GwqFGECBP2ymsNmJpCp1SqYbwqaxBwZ6kCghEJjAbx/5dkxRPAjBYBYVY
+            qpNhv6zpBPq5r4uAMf3+JQ+27IscDQUB0AIGEAAQHc0NDg0MsYCAwIjAgEBMAkG
+            ByqGSM44BAMDMAAwLQIUK1HRNaYFJn5ssFnlLKx/IBjmPcICFQCADSrJbGOmKbuw
+            bGNzOx0m+cRvQg==
+        </item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>
+            MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNV
+            BAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBW
+            aWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4G
+            A1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQx
+            CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3Vu
+            dGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9p
+            ZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgC
+            ggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JO
+            RGP/M/IhMLck/R1aSMffftsmLq3LDEa0RIrb0BDCZMyQmJsVMiJsDka7z0PMNb2E
+            OrlAhYPFmGDPhAFIC3EPFKSZUo0+DYM1FoD+dFhiLQ/cEP8LPc7PZw0DMi3OHRZ
+            bm3G4e1r2sd/MKBLiS0NL5FGPqJoFRXnEvsPT/RDExJV3Rx3Eo3a78aVLDHg7+vA
+            SjPPRFJPiJ2VnqH3pOBo+dCH8sY0MJCkR1GwPg0VCO6MnPuJuqkTLubJUbyPScU
+            /sDA5kZTaRiMnYmGhCJcMJECAwEAAaOBnDCBmTAdBgNVHQ4EFgQUhMwqlCGEPGo+
+            GH4DYmQ7IvW/gBswagYDVR0jBGMwYYAUhMwqkCGEPGo+GH4DYmQ7IvW/gBuheBB0
+            MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UE
+            AxMHQW5kcm9pZIIJAMLgh0ZkSjCNMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEF
+            BQADggEBABnTDPEF/3pYSiN50iAH+mxTIkW1CnxjqJOUViZS/o9ydkBfBKsHm1hI
+            lCEWh2GM30B/kvCNMSU4V2jIGGVZakOJN5JcFGHKuiDIXMC3gYk+FMLuTKMnJIkv
+            a/M96M8J3g1PMRD1JM+jn1h4as3lYM+IjWv0B24Ksxt0COX6sVN4bBSFTkCEn0yN
+            b7OmHc0I1Oqhsp+A+/6LixdDYBmAf0dTP6V2lHBmkHdN+sARphBBHeYaJBYPbHp+
+            M9N7GlOMDSMkU1BIismF//I3JCh3/EyUWNaB1Cf4V8bVPNPzm9+CRtOE5fB+LA5z
+            k1DBXHFNAV5woJct43rl8E0A/7s=
+        </item>
+    </string-array>
+    <string name="app_name">FlashCard</string>
+    <style name="Theme.FlashCard" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>
